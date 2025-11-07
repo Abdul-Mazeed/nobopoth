@@ -12,9 +12,7 @@
     transition: background 0.4s, color 0.4s;
   }
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     min-height: 100vh;
     background: linear-gradient(135deg, #f3f4f6, #e0f2f1);
     color: #222;
@@ -30,7 +28,7 @@
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    max-width: 420px;
+    max-width: 440px;
     width: 90%;
     text-align: center;
     animation: fadeInUp 1s ease;
@@ -44,61 +42,48 @@
     from { opacity: 0; transform: translateY(40px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  h1 {
-    font-size: 1.8rem;
-    color: #00796b;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
+  img.logo {
+    width: 160px;
+    border-radius: 12px;
+    margin-bottom: 0.6rem;
+    animation: fadeIn 2s ease-in-out;
   }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  h1 { font-size: 1.8rem; color: #00796b; margin-bottom: 0.4rem; }
   .dark-mode h1 { color: #4db6ac; }
-  p { margin: 0.6rem 0; line-height: 1.6; }
-  .contact-info {
-    margin-top: 1.2rem;
-    text-align: left;
-  }
-  .label {
-    font-weight: bold;
-    color: #004d40;
-  }
+  p { margin: 0.5rem 0; line-height: 1.6; }
+  .motto { font-weight: 600; color: #444; margin-bottom: 1rem; }
+  .dark-mode .motto { color: #b2dfdb; }
+
+  .contact-info { margin-top: 1.2rem; text-align: left; }
+  .label { font-weight: bold; color: #004d40; }
   .dark-mode .label { color: #80cbc4; }
-  a {
-    text-decoration: none;
-    color: #00796b;
-    font-weight: 600;
-    transition: 0.3s;
-  }
+  a { text-decoration: none; color: #00796b; font-weight: 600; transition: 0.3s; }
   a:hover { color: #004d40; }
   .dark-mode a { color: #80cbc4; }
   .dark-mode a:hover { color: #26a69a; }
 
+  .buttons { margin-top: 1.8rem; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
   .btn {
-    display: inline-block;
-    margin-top: 1.8rem;
     background: #00796b;
     color: white;
-    padding: 0.6rem 1.4rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
   }
-  .btn:hover {
-    background: #004d40;
-    transform: scale(1.05);
-  }
+  .btn:hover { background: #004d40; transform: scale(1.05); }
 
   .toggle-theme {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #00796b;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 1.2rem;
-    cursor: pointer;
+    position: fixed; top: 20px; right: 20px;
+    background: #00796b; color: white;
+    border: none; border-radius: 50%;
+    width: 45px; height: 45px;
+    font-size: 1.2rem; cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: 0.3s;
   }
@@ -117,8 +102,9 @@
 <button class="toggle-theme" title="Toggle Theme">🌙</button>
 
 <div class="card">
-  <h1>📖 মাসিক নবপথ</h1>
-  <p>শুদ্ধ ও শ্লীল সাহিত্যের পথে</p>
+  <img src="logo-nobopath.jpg" alt="মাসিক নবপথ লোগো" class="logo">
+  <h1>মাসিক নবপথ</h1>
+  <p class="motto">সংস্কারের পথে, নতুন প্রজন্মের প্রত্যয়ে</p>
 
   <div class="contact-info">
     <p><span class="label">অস্থায়ী ঠিকানা:</span><br> মেঘভিলা, চান্দনা চৌরাস্তা, গাজীপুর সিটি - ১৭০২</p>
@@ -130,7 +116,10 @@
       <a href="tel:01638210444">01638210444</a></p>
   </div>
 
-  <a class="btn" href="mailto:nobopath.magazine@gmail.com">✉️ ইমেইল করুন</a>
+  <div class="buttons">
+    <a class="btn" href="mailto:nobopath.magazine@gmail.com">✉️ ইমেইল করুন</a>
+    <a class="btn" href="https://www.facebook.com/share/1AL88rQz1b/" target="_blank">💬 ইনবক্স করুন</a>
+  </div>
 
   <footer>
     © ২০২৫ মাসিক নবপথ | সর্বস্বত্ব সংরক্ষিত<br>
